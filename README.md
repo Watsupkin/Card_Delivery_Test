@@ -1,1 +1,1 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/8607amx5uwnw90tx?svg=true)](https://ci.appveyor.com/project/Watsupkin/api-ci)
+[![Build status](https://ci.appveyor.com/api/projects/status/3j1ic2d27wura3xc?svg=true)](https://ci.appveyor.com/project/Watsupkin/card-delivery-test)
