@@ -26,11 +26,12 @@ public class CardDelivery {
 
     @Test
     public void shouldValidValue() {
-        Configuration.timeout = 5000;
-        $("[placeholder='Город']").setValue("Самар");
+        Configuration.timeout = 15000;
+        $("[placeholder='Город']").setValue("Мос");
         $(".menu-item__control").click();
-        $("[name='name']").setValue("Джеки Эстакада");
-        $("[name='phone']").setValue("+78006667777");
+//        $(".calendar-input__native-control").setValue("13.05.2022");
+        $("[name='name']").setValue("Джонни Ноксвилл");
+        $("[name='phone']").setValue("+79879879877");
         $(".checkbox__box").click();
         $(withText("Забронировать")).click();
         $(withText("Успешно!")).shouldBe(visible);
