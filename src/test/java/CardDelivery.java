@@ -26,7 +26,7 @@ public class CardDelivery {
 
     @Test
     public void shouldValidValue() {
-        Configuration.timeout = 15000;
+        Configuration.timeout = 5000;
         $("[placeholder='Город']").setValue("Самар");
         $(".menu-item__control").click();
         $("[name='name']").setValue("Джеки Эстакада");
