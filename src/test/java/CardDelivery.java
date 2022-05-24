@@ -1,3 +1,5 @@
+
+import org.slf4j.*;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeEach;
@@ -56,7 +58,7 @@ public class CardDelivery {
         $("[placeholder='Город']").setValue("Самара");
         $("[placeholder='Дата встречи']").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
         $("[placeholder='Дата встречи']").setValue(meetingDate);
-        $("[name='name']").setValue("Джеуи Эстакада");
+        $("[name='name']").setValue("Джеки Эстакада");
         $("[name='phone']").setValue("+78006667777");
         $(".checkbox__box").click();
         $(withText("Забронировать")).click();
@@ -74,7 +76,7 @@ public class CardDelivery {
         String meetingDate = LocalDate.now().plusDays(7).format(formatter);
 
         $("[placeholder='Город']").setValue("Са");
-        $(byText("Москва")).click();
+        $(byText("Самара")).click();
         selectPlusSevenDaysDate();
         $$(".calendar__day").find(text(meetingDateDay)).click();
         $("[name='name']").setValue("Джеки Эстакада");
