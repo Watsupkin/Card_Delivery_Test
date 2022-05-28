@@ -1,5 +1,3 @@
-
-import org.slf4j.*;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeEach;
