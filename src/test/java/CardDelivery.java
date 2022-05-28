@@ -27,9 +27,8 @@ public class CardDelivery {
     @Test
     public void shouldValidValue() {
         Configuration.timeout = 15000;
-        $("[placeholder='Город']").setValue("Мос");
+        $("[placeholder='Город']").setValue("Самар");
         $(".menu-item__control").click();
-//        $(".calendar-input__native-control").setValue("13.05.2022");
         $("[name='name']").setValue("Джонни Ноксвилл");
         $("[name='phone']").setValue("+79879879877");
         $(".checkbox__box").click();
