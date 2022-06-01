@@ -16,6 +16,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class CardDelivery {
 
+
     @BeforeEach
     public void openPage() {
         open("http://localhost:9999/");
@@ -24,15 +25,14 @@ public class CardDelivery {
 
     @Test
     public void shouldValidValue() {
-        Configuration.timeout = 15000;
-        $("[placeholder='Город']").setValue("Са");
+        $("[placeholder='Город']").setValue("Сам");
         $$(".menu-item__control").findBy(text("Самара")).click();
-        $("[placeholder='Дата встречи']").setValue("03.06.2022");
-        $("[name='name']").setValue("Джонни Ноксвилл");
-        $("[name='phone']").setValue("+79879879877");
+//        $(".calendar-input__native-control").setValue("13.05.2022");
+        $("[name='name']").setValue("Мистер Твистер");
+        $("[name='phone']").setValue("+78005553535");
         $(".checkbox__box").click();
         $(withText("Забронировать")).click();
-        $(withText("Успешно!")).shouldBe(visible);
+        $(withText("Успешно!")).shouldBe(visible, Duration.ofMillis(15000));
     }
 
     private void selectPlusSevenDaysDate() {
@@ -58,7 +58,7 @@ public class CardDelivery {
         $("[placeholder='Дата встречи']").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
         $("[placeholder='Дата встречи']").setValue(meetingDate);
         $("[name='name']").setValue("Джеки Эстакада");
-        $("[name='phone']").setValue("+78006667777");
+        $("[name='phone']").setValue("+78005553535");
         $(".checkbox__box").click();
         $(withText("Забронировать")).click();
         $(byText("Успешно!")).shouldBe(Condition.visible, Duration.ofMillis(15000));
@@ -79,7 +79,7 @@ public class CardDelivery {
         selectPlusSevenDaysDate();
         $$(".calendar__day").find(text(meetingDateDay)).click();
         $("[name='name']").setValue("Джеки Эстакада");
-        $("[name='phone']").setValue("+78006667777");
+        $("[name='phone']").setValue("+78005553535");
         $(".checkbox__box").click();
         $(withText("Забронировать")).click();
         $(byText("Успешно!")).shouldBe(Condition.visible, Duration.ofMillis(15000));
